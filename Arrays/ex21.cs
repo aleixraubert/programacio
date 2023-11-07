@@ -27,9 +27,9 @@ namespace prog
 
             num=Convert.ToInt32(Console.ReadLine());
 
-            while((i<numbers.Length) && (!found))
+            while ((i < numbers.Length/2) && (!found))
             {
-                if (numbers[i] == num) found = true;
+                if (numbers[i] == num || numbers[numbers.Length - 1 - i] == num) found = true;
                 i++;
             }
 
