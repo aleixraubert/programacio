@@ -52,6 +52,8 @@ namespace prog
 
             }
 
+            if (nums[nums.Length-1] != no_rep[k]) no_rep[k + 1] = nums[nums.Length-1];
+
             Console.WriteLine(MSG_Final);
 
             foreach(int i in no_rep)
