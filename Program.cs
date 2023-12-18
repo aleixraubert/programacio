@@ -15,6 +15,7 @@ namespace Programacio
     {
         public static void Main()
         {
+            const string Msg_Area = "El area es: {0}";
             const string Msg_Ask = "Que figura quieres calcular? (1:Cuadrado, 2:Rectangulo, 3:Circulo, 4:Pentagono): ";
 
             int option;
@@ -32,7 +33,7 @@ namespace Programacio
                     Console.Write("Introduce la altura del cuadrado: ");
                     heightSquare = Convert.ToInt32(Console.ReadLine());
 
-                    Console.WriteLine("El area del cuadrado es: " + Area(baseSquare,heightSquare));
+                    Console.WriteLine(Msg_Area,Area(baseSquare,heightSquare));
                     break;
                 case 2:
                     int baseRectangle, heightRectangle;
@@ -41,14 +42,14 @@ namespace Programacio
                     Console.Write("Introduce la altura del rectangulo: ");
                     heightRectangle = Convert.ToInt32(Console.ReadLine());
 
-                    Console.WriteLine("El area del rectangulo es: " + Area(baseRectangle,heightRectangle));
+                    Console.WriteLine(Msg_Area,Area(baseRectangle,heightRectangle));
                     break;
                 case 3:
                     double radius;
                     Console.Write("Introduce el radio del circulo: ");
                     radius = Convert.ToDouble(Console.ReadLine());
 
-                    Console.WriteLine("El area del circulo es: " + Area(radius));
+                    Console.WriteLine(Msg_Area,Area(radius));
                     break;
                 case 4:
                     int side, apothem;
@@ -57,7 +58,7 @@ namespace Programacio
                     Console.Write("Introduce el apotema del pentagono: ");
                     apothem = Convert.ToInt32(Console.ReadLine());
 
-                    Console.WriteLine("El area del pentagono es: " + Area(side, apothem, 5));
+                    Console.WriteLine(Msg_Area,Area(side, apothem, 5));
                     break;
                 default:
                     Console.WriteLine("Opcion no valida");
